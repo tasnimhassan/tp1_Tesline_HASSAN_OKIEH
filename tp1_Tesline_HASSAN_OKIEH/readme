@@ -1,0 +1,142 @@
+Réalisé par : Tesline Hassan Okieh
+
+##  Description
+
+Cette application  permet à un utilisateur de se connecter avec un identifiant et un mot de passe vérifiés dans une base de données MySQL.
+Les mots de passe sont stockés de manière sécurisée grâce au hachage.
+
+
+## Objectif pédagogique
+
+Ce projet permet de pratiquer :
+
+* les formulaires HTML
+* le traitement PHP
+* la connexion base de données
+* l’authentification utilisateur
+* la sécurisation des mots de passe
+
+
+##  Technologies utilisées
+
+* HTML
+* CSS
+* PHP
+* MySQL
+* WampServer
+
+
+## Installation avec WampServer
+
+# 1- Lancer WampServer
+
+Démarrer :
+
+* Apache
+* MySQL
+
+L’icône Wamp doit être verte.
+
+# 2️-Copier le projet
+
+-Placer le dossier du projet dans :
+-C:\wamp64\www\
+-Le dossier s’appelle : tp1_Tesline_HASSAN_OKIEH
+-Chemin final :
+-C:\wamp64\www\tp1_Tesline_HASSAN_OKIEH
+
+
+# 3-Créer la base de données
+
+Ouvrir dans le navigateur :
+
+
+http://localhost/phpmyadmin
+
+
+Cliquer sur **SQL** puis exécuter :
+
+```sql
+CREATE DATABASE tesline_db;
+USE tesline_db;
+
+CREATE TABLE utilisateurs(
+id INT AUTO_INCREMENT PRIMARY KEY,
+identifiant VARCHAR(50) UNIQUE,
+motdepasse VARCHAR(255)
+);
+```
+# 4-Ajouter l’utilisateur par défaut
+
+Dans phpMyAdmin → SQL :
+
+```sql
+INSERT INTO utilisateurs (identifiant, motdepasse)
+VALUES ('admin','$2y$10$3yckf86kGwxw1eiYDnxRvOy0.Erjmj9BhH8lPSGjHN7difHYM9CQ2');
+```
+
+# 5- Lancer l’application
+
+Dans le navigateur :
+
+```
+http://localhost/tp1_Tesline_HASSAN_OKIEH
+```
+
+
+##  Compte de test
+
+Identifiant : admin
+Mot de passe : admin123
+
+
+
+## Sécurité implémentée
+
+Le système utilise :
+
+* `password_hash()` → chiffrement du mot de passe
+* `password_verify()` → vérification sécurisée
+* PDO → requêtes préparées
+* protection contre injection SQL
+
+
+
+## Structure du projet
+
+
+projet/
+│
+├── index.php
+├── connexion.php
+├── ajout.php
+├── config.php
+├── style.css
+
+
+## Fonctionnement
+
+1. L’utilisateur saisit ses identifiants
+2. Les données sont envoyées au serveur
+3. PHP vérifie dans la base
+4. Le mot de passe est comparé
+5. Résultat :
+
+* accès autorisé
+* ou message d’erreur
+
+
+
+## Conclusion
+
+Ce projet démontre la réalisation d’un système d’authentification sécurisé avec interaction base de données, respectant les bonnes pratiques du développement web :
+
+* séparation interface / logique
+* stockage sécurisé
+* vérification serveur
+
+
+
+
+
+
