@@ -1,0 +1,63 @@
+body{
+    background:#f2f2f2;
+    font-family:Arial;
+    }
+    
+    .tesline1-box{
+    width:300px;
+    margin:100px auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+    
+    .tesline2-input{
+    width:90%;
+    padding:10px;
+    margin:10px;
+    }
+    
+    .tesline3-btns{
+    display:flex;
+    justify-content:space-between;
+    }
+    
+    button{
+    padding:10px;
+    border:none;
+    color:white;
+    cursor:pointer;
+    }
+    
+    .tesline4-reset{
+    background:#dc3545;
+    }
+    
+    .tesline5-valider{
+    background:#007bff;
+    }
+    
+    .tesline6-ajout{
+    background:#28a745;
+    }
+    
+    .tesline7-message{
+    margin-top:15px;
+    font-weight:bold;
+    }
+    
+    .success{color:green;}
+    .error{color:red;}
+    .tesline2 {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.tesline2 {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+    
